@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Visualization (Objectives)</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css"/>
+</head>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text">
+					<!-- class=logo_color allows changing of color -->
+					<h1><a href="index.html">H1B Data Analysis Project<span class="logo_color"> </span></a></h1>
+					<h2>Visualization of Complex Data (DATS 6401)</h2>
+				</div><!-- logo_text -->
+			</div><!-- logo -->
+			<div id="menubar">
+				<ul id="menu">
+					<li><a href="index.html">Home</a></li>
+					<li class="selected"><a href="objectives.html">Objectives</a></li>
+					<li><a href="RelatedResearch.html">Research</a></li>
+					<li><a href="Visualization.html">Visualization</a></li>
+					<li><a href="Conclusions.html">Conclusions</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="aboutme.html">Aboutme</a></li>
+				</ul><!-- menu -->
+			</div><!-- menubar -->
+		</div><!-- header -->
+		<div id="site_content">
+			<div class="sidebar">
+				<!-- insert your sidebar items here -->
+				<h3>Website of data</h3>
+				<ul>
+					<li><a href="https://www.kaggle.com/nsharan/h-1b-visa">H1B dataset for FY2011-2016</a></li>
+					<li><a href="https://www.foreignlaborcert.doleta.gov/performancedata.cfm">H1B dataset for FY2017</a></li>
+				</ul>
+			</div><!-- sidebar -->
+			<div id="content">
+				<!-- insert page content here -->
+					<h1>Data Processing</h1>
+
+					<img src="objectives.jpg" alt="Word cloud" style="width:600px;height:300px;">
+				<p>
+					By using different visualization tool to identify the important variables that contribute to and interpretation of trends in H1B visas in order to analyze, forecast, draw conclusions, and provide a fair idea for applicants.
+				</p>
+				<ul>
+					<li>Doing some data preprocessing to transform the raw data into an understandable format.</li>
+					<li>Find and combine any other external datasets to enrich the analysis such as dataset of FY2017.</li>
+					<li>To make appropriated Visualizations, variables should be Developed and compiled into visualization utilizing programs.</li>
+					<li>Extract some aspects, and analyze the changes in employers’ preference as well as forecasts for the future trends. </li>
+				</ul>
+				<p>
+					Using the skills taught in class, I used HTML, D3.js, Google API, Python, R ,and Tableau to develop this project. By using D3js, Google API and Tableau, I will able to make some visualizations in order to put all the information in a website(HTML). Ultimately, the visualized analysis helps the applicant to found out which criteria used for visa approval, foreign job placements in the US and to identify which specialization to encourage both, H1B aspirants and employers.
+				</p>
+
+			</div><!-- content -->
+		</div><!-- site_content -->
+		<div id="content_footer">
+			<div id="footer">
+				&copy;
+				<script>
+					var d = new Date();
+					document.write(d.getFullYear());
+				</script> |
+				<a href="http://validator.w3.org/check?uri=referer">HTML5</a> |
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+				| <a href="#">Developed by YHC</a>
+			</div><!-- footer -->
+		</div><!-- content_footer -->
+	</div><!-- main (this is a comment tag) -->
+</body>
+
+<script type="text/javascript">
+	function showPopup(url) {
+		newWindow = window.open(url,'name','height=400,width=520,top=200,left=300,resizable');
+		if (window.focus) {
+			newWindow.focus()
+		}
+	}
+</script>
+</html>

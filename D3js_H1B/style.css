@@ -1,0 +1,14 @@
+/* 02 CSS */
+
+.highlight {
+  color: #C64C6F;
+  font-weight: 700;
+}
+
+.item {
+  padding-left: 30px;
+}
+
+.bigger {
+  font-size: 150%;
+}

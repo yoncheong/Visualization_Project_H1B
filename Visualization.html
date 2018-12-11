@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Visualization (Visualization)</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text">
+					<!-- class=logo_color allows changing of color -->
+					<h1><a href="index.html">H1B Data Analysis Project<span class="logo_color"> </span></a></h1>
+					<h2>Visualization of Complex Data (DATS 6401)</h2>
+				</div><!-- logo_text -->
+			</div><!-- logo -->
+			<div id="menubar">
+				<ul id="menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="objectives.html">Objectives</a></li>
+					<li><a href="RelatedResearch.html">Research</a></li>
+					<li class="selected"><a href="Visualization.html">Visualization</a></li>
+					<li><a href="Conclusions.html">Conclusions</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="aboutme.html">Aboutme</a></li>
+
+				</ul><!-- menu -->
+			</div><!-- menubar -->
+		</div><!-- header -->
+
+		<div id="site_content">
+			<div class="sidebar">
+				<!-- insert your sidebar items here -->
+				<h3></h3>
+				<h4></h4>
+				<h5></h5>
+				<p>
+
+					<br/><a href="#"></a>
+				</p>
+				<p></p>
+				<h4></h4>
+				<h5></h5>
+				<p>
+
+					<br /><a href="#"></a>
+				</p>
+				<h3></h3>
+				<ul>
+
+			</div>
+
+			<div id="content">
+				<!-- insert page content here -->
+				<script src="https://www.gstatic.com/charts/loader.js"></script>
+				<script>
+						google.charts.load('current',{'packages':['corechart']});
+						google.charts.setOnLoadCallback(drawAllSheets);
+
+						function drawAllSheets() {
+							drawSheetName('Overall_Trends', 'SELECT A,B,C,D,E,F,G,H,I,J,K,L,M',
+										  Overall_TrendsResponseHandler);
+							drawSheetName('Top10_Country', 'SELECT A,B,C,D,E,F,G,H',
+											CountryResponseHandler);
+							drawSheetName('Education_Level', 'SELECT A,B',
+											Education_Level_2011ResponseHandler);
+							drawSheetName('Education_Level', 'SELECT A,H',
+											Education_Level_2017ResponseHandler);
+							drawSheetName('Top10_States', 'SELECT A,I',
+										  Top10_StatesResponseHandler);
+							drawSheetName('Top10_States', 'SELECT A,I,J',
+											Top10_States_geoResponseHandler);
+
+						}//drawAllSheets
+
+						function drawSheetName(sheetName, query, responseHandler) {
+							var queryString = encodeURIComponent(query);
+							var query = new google.visualization.Query(
+								'https://docs.google.com/spreadsheets/d/1nwE2a_xyjZ2MvGoYE26qwFoxlgYYrtnTG5A1t1wd9Os/gviz/tq?sheet='
+								+ sheetName + '&headers=1&tq=' + queryString);
+							query.send(responseHandler);
+						} //drawSheetName
+
+
+						function checkError(response) {
+							if (response.isError()) {
+								alert('Error in query: ' + response.getMessage() +
+									' ' + response.getDetailedMessage());
+								return;
+							}
+						} //checkError
+
+						function Overall_TrendsResponseHandler(response) {
+							checkError(response);
+							var data = response.getDataTable();
+							data.sort({column: 5, desc:true});
+
+							var options = {
+								  vAxis: {title: 'Number of Applicants'},
+								  hAxis: {title: 'Receipts & Approvals Volume'},
+								  seriesType: 'bars',
+								  series: {11: {type: 'line'}}
+								};
+
+							var chart = new google.visualization.ComboChart(document.getElementById('Overall_Trends_div'));
+
+							chart.draw(data, options);
+						} //Overall_TrendsResponseHandler
+
+						function CountryResponseHandler(response) {
+							checkError(response);
+							var data = response.getDataTable();
+							data.sort({column: 1, desc:true});
+
+							var options = {
+								height: 400,
+								title: 'Trend of H1B Petitions Filed FY 2007 Through 2017',
+								vAxis: {title: 'Number of Petitions'},
+								hAxis: {title: 'Country'},
+								colors: ['#EC534A','#E9B015', '#5A8919', '#4486BF', '#CE96CD'],
+							};
+
+							var chart = new google.visualization.ScatterChart(
+										document.getElementById('Country_div'));
+							chart.draw(data, options);
+						} //CountryResponseHandler
+
+
+
+						function Education_Level_2011ResponseHandler(response) {
+							checkError(response);
+							var data = response.getDataTable();
+							data.sort({column:1, desc:true});
+
+							var options = {
+							  title: 'Education Level for FY2011',
+							  is3D: true,
+							};
+
+							var chart = new google.visualization.PieChart(document.getElementById('Education_Level_2011_div'));
+							chart.draw(data, options);
+						} //Status_2011ResponseHandler
+
+
+							function Education_Level_2017ResponseHandler(response) {
+								checkError(response);
+								var data = response.getDataTable();
+								data.sort({column:1, desc:true});
+
+								var options = {
+								  title: 'Education Level for FY2017',
+								  is3D: true,
+								};
+
+								var chart = new google.visualization.PieChart(document.getElementById('Education_Level_2017_div'));
+								chart.draw(data, options);
+								} //Status_2017ResponseHandler
+
+								function Top10_StatesResponseHandler(response) {
+									checkError(response);
+									var data = response.getDataTable();
+									data.sort({column: 1, desc: true});
+
+									var options = {
+											vAxis: {title: 'Fixed Value'},
+											hAxis: {title: 'States'},
+											colors: ['#A52A2A']
+									};
+
+									var chart = new google.visualization.LineChart(
+											document.getElementById('Top10_States_div'));
+									chart.draw(data, options);
+								} //Top10_StatesResponseHandler
+
+
+					</script>
+
+					<br></br>
+					<h4>Brief look before data preprocessing:</h4>
+					<img src="Excel.png" alt="excel" style="width:800px;height:300px;">
+					<br></br>
+					<br></br>
+					<p>
+						<a href="./D3js_H1B/index.html">D3js for H1B - Correlation</a>
+					<br></br>
+					<br></br>
+					<h4>Trend of H1B Petitions 2007 Through 2017: Receipt Volume Overview</h4>
+						<center><div id="Overall_Trends_div" style="width:800px; height:350px;" ></div></center>
+						<table align="center"></table>
+				<br></br>
+				<br></br>
+					<h4>Trend of H1B Petitions Filed from 2011 Through 2017: Beneficiary Country of Birth</h4>
+					<tr>
+						<center><div id="Country_div" style="width:800px; height:350px"></div></center>
+					  <table align="center"></table>
+						<br></br>
+						<br></br>
+						<br></br>
+							<h4>All States of H1B Petitions Filed from 2011 Through 2017</h4>
+						<a href="https://public.tableau.com/profile/yon.ho.cheong#!/vizhome/All_States_0/All_States?publish=yes"><img src="All_States.png" alt= "States" style="width:500px;height:350px;"></a>
+						<br></br>
+						<br></br>
+						<h4>Top10 States of H1B Petitions Filed from 2011 Through 2017</h4>
+						<tr>
+							<center><div id="Top10_States_div" style="width:800px; height:350px"></div></center>
+							<table align="center"></table>
+						<br></br>
+						<br></br>
+					<h4>Comparison of Education level for petitions FY2011 vs FY2017</h4>
+					<table align="center">
+						<tr>
+							<td><div id="Education_Level_2011_div" style="width: 400px; height: 300px;"></div>
+							<td><div id="Education_Level_2017_div" style="width: 400px; height: 300px;"></div>
+						</tr>
+					</table>
+					<br></br>
+					<br></br>
+				<h4>Comparison of occupations for petitions FY2011 vs FY2017</h4>
+				<table align="center">
+					<tr>
+						<td><img src="Occupations_1.png" alt= "Occu_1" style="width:400px;height:300px;"></a>
+						<td><img src="Occupations_2.png" alt= "Occu_2" style="width:400px;height:300px;"></a>
+					</tr>
+				</table>
+					<br></br>
+					<br></br>
+						<h4>Overall Top10 Employers who submit the greatest number of applications during FY2011 to FY2017</h4>
+					<a href="https://public.tableau.com/profile/yon.ho.cheong#!/vizhome/Top_Employer/Employers?publish=yes"><img src="Top_Employer.png" alt= "Employer" style="width:800px;height:400px;"></a>
+					<br></br>
+					<br></br>
+					<h4>Data Analyst vs Data Science</h4>
+					<a href="https://public.tableau.com/profile/yon.ho.cheong#!/vizhome/DataScientistvsDataAnalyst/DAvsDS?publish=yes"><img src="DSvsDA.png" alt= "DSvsDA" style="width:300px;height:400px;"></a>
+					<br></br>
+					<br></br>
+				<h4>Mean Wage of a DS vs DA with Case Status Certified</h4>
+				<table align="center">
+					<tr>
+						<td><a href="https://public.tableau.com/profile/yon.ho.cheong#!/vizhome/MeanWageofaDAvsDSwithCaseStatusCerified/MeanWageofaDAvsDSwithCaseStatusCertified?publish=yes"><img src="DAvsDS_1.png" alt= "DAvsDS_1" style="width:200px;height:400px;"></a>
+							<td><a href="https://public.tableau.com/profile/yon.ho.cheong#!/vizhome/MeanWageofaDSvsDAwithCaseStatusCerified/MeanWageofaDSvsDAwithCaseStatusCertified?publish=yes"><img src="DAvsDS_2.png" alt= "DAvsDS_2" style="width:200px;height:400px;"></a>
+					</tr>
+				</table>
+				<br></br>
+				<br></br>
+				<h4>Top10 Companies for Data Analyst & Data Science</h4>
+				<table align="center">
+					<tr>
+						<td><a href="https://public.tableau.com/profile/yon.ho.cheong#!/vizhome/Top10CompanyforDA/Top10CompanyforDA?publish=yes"><img src="Top10_DA.png" alt= "Top10_DA" style="width:300px;height:300px;"></a>
+						<td><<a href="https://public.tableau.com/profile/yon.ho.cheong#!/vizhome/Top10CompanyforDS/Top10CompanyforDS?publish=yes"><img src="Top10_DS.png" alt= "Top10_DS" style="width:300px;height:300px;"></a>
+					</tr>
+				</table>
+
+				<div id="content_footer">
+					<div id="footer">
+						&copy;
+						<script>
+							var d = new Date();
+							document.write(d.getFullYear());
+						</script> |
+						<a href="http://validator.w3.org/check?uri=referer">HTML5</a> |
+						<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+						| <a href="#">Developed by YHC</a>
+					</div><!-- footer -->
+				</div><!-- content_footer -->
+</body>
+</html>
