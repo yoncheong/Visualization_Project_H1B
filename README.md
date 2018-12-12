@@ -9,6 +9,10 @@ H1B Visa Petitions Analysis
 
 Link to dataset : https://www.kaggle.com/nsharan/h-1b-visa
 
+
+Link to dataset(FY2017): https://www.foreignlaborcert.doleta.gov/performancedata.cfm
+
+
 ### Running the code
 
 * Open Index.html
@@ -37,7 +41,21 @@ Using the skills taught in class, I used HTML, D3.js, Google API, Python, R ,and
 
 ## Related Research
 
+* The H-1B Visa Debate, Explained - Harvard Business Review
 
+   https://hbr.org/2017/05/the-h-1b-visa-debate-explained
+* Foreign Labor Certification Data Center
+
+  https://www.foreignlaborcert.doleta.gov
+* Key facts about the U.S. H-1B visa program
+
+  http://www.pewresearch.org/fact-tank/2017/04/27/key-facts-about-the-u-s-h-1b-visa-program/
+* H1B visa News and Updates from The Economic Times
+
+  https://economictimes.indiatimes.com/topic/H1B-visa/news
+* H-1B visa - Wikipedia
+
+  https://en.wikipedia.org/wiki/H-1B_visa
 
 
 ## Credit
