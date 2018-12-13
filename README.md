@@ -19,10 +19,9 @@ Link to dataset(FY2017): https://www.foreignlaborcert.doleta.gov/performancedata
 
 ## Abstract
 
-* This project provides essential information on job titles, preferred regions of settlement, salary range make up most of the H1B petitions, foreign applicants and employers' trends for H1B visa application. 
+The H1B is an employment-based visa category for temporary foreign workers in the United States. Every year, the US immigration department receives over 200,000 petitions and selects 85,000 applications through a random process and the U.S. employer must submit a petition for an H1B visa to the US immigration department. This is the most common visa status applied to international students once they complete college or higher education and begin working in a full-time position. The project provides essential information on job titles, preferred regions of settlement, foreign applicants and employers' trends for H1B visa application. According to locations, employers, job titles and salary range make up most of the H1B petitions, so different visualization utilizing tools will be used in order to analyze and interpreted in relation to the trends of the H1B visa to provide a recommendation to the applicant. This report is the base of the project for Visualization of Complex Data class at the George Washington University, some examples in this project has an analysis for the different relevant variables (Case Status, Employer Name, SOC name, Job Title, Prevailing Wage, Worksite, and Latitude and Longitude information) from Kaggle and Office of Foreign Labor Certification(OFLC) in order to see the H1B visa changes in the past several decades. 
 
-In this project, I will use different visualization tools to analyze and interpreted in relation to the trends of the H1B visa as well as information about the rising demand of the jobs related to the field of Data Science.
-
+*Keywords:* H1B visa, Data Analysis, Visualization of Complex Data, HTML, JavaScript, CSS, Tableau, D3.js
 
 ## Dataset
 
