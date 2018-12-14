@@ -1,7 +1,9 @@
 # Visualization_Project_H1B
 
 ##  New trends in H1B Visa Data Analysis Project
-### Author: Yon Ho Cheong
+### Author: Yon ho Cheong
+### Instructor: Nima Zahadat, Ph.D.
+
 
 H1B Data Analysis Project for Visualization of Complex Data
 
