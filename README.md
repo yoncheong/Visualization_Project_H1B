@@ -1,11 +1,9 @@
 # Visualization_Project_H1B
 
-##  H1B VISA VISUALIZATION DATASET PROJECT
+##  New trends in H1B Visa Data Analysis Project
 ### Author: Yon Ho Cheong
 
 H1B Data Analysis Project for Visualization of Complex Data
-
-H1B Visa Petitions Analysis
 
 Link to dataset : https://www.kaggle.com/nsharan/h-1b-visa
 
@@ -71,7 +69,7 @@ The dataset contains 10 columns and covers a total of 3 million records spanning
   https://en.wikipedia.org/wiki/H-1B_visa
 
 
-## Related Research
+## Key Findings
 
 * From the analysis, the government is cutting down the number of approvals for H1B on 2017.
 * In the past decade, due to the nature of demand for high-skilled workers, visa holders have clustered in STEM fields and come mostly from countries in Asia such as China and India.
