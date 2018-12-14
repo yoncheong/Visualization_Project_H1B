@@ -54,19 +54,19 @@ The dataset contains 10 columns and covers a total of 3 million records spanning
 
 ## Related Research
 
-The H-1B Visa Debate, Explained - Harvard Business Review
+* The H-1B Visa Debate, Explained - Harvard Business Review
 
    https://hbr.org/2017/05/the-h-1b-visa-debate-explained
-Foreign Labor Certification Data Center
+* Foreign Labor Certification Data Center
 
   https://www.foreignlaborcert.doleta.gov
-Key facts about the U.S. H-1B visa program
+* Key facts about the U.S. H-1B visa program
 
   http://www.pewresearch.org/fact-tank/2017/04/27/key-facts-about-the-u-s-h-1b-visa-program/
-H-1B visa News and Updates from The Economic Times
+* H-1B visa News and Updates from The Economic Times
 
   https://economictimes.indiatimes.com/topic/H1B-visa/news
-H-1B visa - Wikipedia
+* H-1B visa - Wikipedia
 
   https://en.wikipedia.org/wiki/H-1B_visa
 
